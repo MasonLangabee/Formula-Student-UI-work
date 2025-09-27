@@ -1,0 +1,87 @@
+.leftNavBar {
+  width: 250px;
+  height: calc(100vh - 60px);
+  transition: width 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.leftNavBar.light {
+  background-color: #2d81d2;
+}
+
+.leftNavBar.dark {
+  background-color: #1b4d7e;
+}
+
+.leftNavBar.collapsed {
+  width: 60px;
+}
+
+.nav-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.nav-button {
+  width: 100%;
+  height: 40px;
+  margin-top: 1%;
+  direction: rtl;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding-left: 10px;
+}
+
+.nav-button.light {
+  background-color: #2d81d2;
+  color: white;
+}
+
+.nav-button.dark {
+  background-color: #1b4d7e;
+  color: white;
+}
+
+.nav-button.selected.light {
+  background-color: #cd214d;
+  color: white;
+}
+
+.nav-button.selected.dark {
+  background-color: #841532;
+}
+
+.leftNavBar.collapsed .nav-button .nav-text {
+  justify-content: flex-end;
+  display: none;
+}
+
+.collapse-btn {
+  width: 100%;
+  height: 40px;
+  margin-top: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: inherit;
+}
+
+.collapse-icon {
+  height: 24px;
+  width: 24px;
+  transition: transform 0.3s;
+}
+
+.leftNavBar.collapsed .collapse-icon {
+  transform: rotate(180deg);
+}
